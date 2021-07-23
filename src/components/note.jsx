@@ -4,8 +4,9 @@ function Note(props){
     
     return(
         <div className="note">
-            <h1>{props.note.title}</h1>
-            <p>{props.note.content}</p>
+            <h1>{props.text.title}</h1>
+            <p>{props.text.content}</p>
+            <h5>DELETE</h5>
         </div>
         
     );

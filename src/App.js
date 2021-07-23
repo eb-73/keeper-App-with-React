@@ -1,17 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Header from "./components/hedear";
+import Addbox from "./components/Addbox"
 import Note from "./components/note";
 import Footer from "./components/footer";
-import notes from "./notes";
+
+
 
 function App (){
+  
+  const [note,setNote]=useState([]);
+
+  function addItems(items){
+    setNote((prevValue)=> [...prevValue,items]);
+  }
+
   return(
     <div>
-<Header/>
+<Header />
+
+<Addbox add={addItems} />
 
 <div className="notes">
   {
-  notes.map(x => <Note note={x} key={x.key}/> )
+  note.map((item,index) => <Note text={item} key={index}/> )
   }
 </div>
 

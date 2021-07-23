@@ -18,6 +18,47 @@ h1.header{
     color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+div.form{
+    position: relative;
+    width: 600px;
+    height: 150px;
+    margin: 30px auto;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+}
+.form input{
+    display:block;
+    width: 90%;
+    height: 40px;
+    margin: 9px auto;
+    border: none;
+    font-size: 20px;
+}
+.form input::placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(167, 167, 167);
+}
+.form input:focus{
+    border-bottom: 1px solid rgb(255, 208, 0);
+    outline: none;
+}
+div.addButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background:rgb(243, 198, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: absolute;
+    top: 86%;
+    right: 2%;
+    cursor: pointer;
+}
 div.notes{
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +78,18 @@ div.note{
 .note h1{
     font-size: 20px;
     font-weight: bold;
+}
+.note h5{
+    width: 70px;
+    height: 30px;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 208, 0);
+    cursor: pointer;
 }
 
 h1.footer{
