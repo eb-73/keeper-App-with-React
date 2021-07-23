@@ -14,6 +14,13 @@ function App (){
     setNote((prevValue)=> [...prevValue,items]);
   }
 
+  function delItems(id)
+  {
+    setNote((prevValue)=>
+      prevValue.filter((items,index)=> (index!==id) )
+    );
+  }
+
   return(
     <div>
 <Header />
@@ -22,7 +29,7 @@ function App (){
 
 <div className="notes">
   {
-  note.map((item,index) => <Note text={item} key={index}/> )
+  note.map((item,index) => <Note text={item} delete={delItems} key={index} id={index} /> )
   }
 </div>
 
